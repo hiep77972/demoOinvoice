@@ -1,0 +1,146 @@
+/* Animation Styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+/* Apply animations */
+.dropdown-content {
+  animation: slideDown 0.2s ease-out;
+}
+
+.invoice-form, 
+.invoice-summary, 
+.table-container {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.form-row:nth-child(1) {
+  animation: slideUp 0.3s ease-out 0.1s backwards;
+}
+
+.form-row:nth-child(2) {
+  animation: slideUp 0.3s ease-out 0.2s backwards;
+}
+
+.form-row:nth-child(3) {
+  animation: slideUp 0.3s ease-out 0.3s backwards;
+}
+
+#invoice-table tbody tr {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.btn-primary {
+  transition: all 0.2s ease;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Hover effects */
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: var(--neutral-400);
+}
+
+.action-buttons .btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.action-buttons .btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease-out, height 0.3s ease-out;
+}
+
+.action-buttons .btn:active::after {
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+}
+
+.highlight-row {
+  animation: pulse 1s;
+}
+
+/* Form field focus highlight animation */
+@keyframes focusHighlight {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  animation: focusHighlight 0.5s ease-out;
+}
+
+/* Subtle row add animation */
+@keyframes rowAddHighlight {
+  0% {
+    background-color: rgba(16, 185, 129, 0.2);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.row-added {
+  animation: rowAddHighlight 1.5s ease-out;
+}

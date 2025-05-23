@@ -1,0 +1,151 @@
+/* Table Styles */
+.invoice-items {
+  margin: var(--spacing-6) 0;
+}
+
+.table-toolbar {
+  display: flex;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-md);
+}
+
+#invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+#invoice-table th {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 500;
+  text-align: left;
+  padding: var(--spacing-3);
+  white-space: nowrap;
+}
+
+#invoice-table th:first-child {
+  border-top-left-radius: var(--radius-sm);
+}
+
+#invoice-table th:last-child {
+  border-top-right-radius: var(--radius-sm);
+}
+
+#invoice-table td {
+  padding: var(--spacing-2);
+  border-bottom: 1px solid var(--neutral-200);
+  background-color: white;
+}
+
+#invoice-table tbody tr:nth-child(even) td {
+  background-color: var(--neutral-50);
+}
+
+#invoice-table tbody tr:hover td {
+  background-color: var(--neutral-100);
+}
+
+#invoice-table .checkbox-cell {
+  width: 30px;
+  text-align: center;
+}
+
+#invoice-table input[type="text"],
+#invoice-table input[type="number"],
+#invoice-table select {
+  width: 100%;
+  padding: var(--spacing-2);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+}
+
+#invoice-table input[type="text"]:focus,
+#invoice-table input[type="number"]:focus,
+#invoice-table select:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+#invoice-table .numeric-cell {
+  text-align: right;
+}
+
+.search-icon {
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.action-cell {
+  width: 30px;
+  text-align: center;
+}
+
+.action-cell button {
+  background: none;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+  padding: var(--spacing-1);
+}
+
+.row-status {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: var(--spacing-2);
+}
+
+.row-status.new {
+  background-color: var(--success);
+}
+
+.row-status.pending {
+  background-color: var(--warning);
+}
+
+.row-status.deleted {
+  background-color: var(--error);
+}
+
+.dropdown-cell {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: var(--shadow-lg);
+  z-index: 10;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--neutral-200);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-item {
+  padding: var(--spacing-2) var(--spacing-3);
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: var(--neutral-100);
+}

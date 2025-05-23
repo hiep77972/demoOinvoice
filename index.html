@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hóa đơn điện tử</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/table.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <h1>Hóa đơn điện tử</h1>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#" class="active">Hệ thống</a></li>
+          <li><a href="#">Danh mục</a></li>
+          <li><a href="#">Hóa đơn điện tử</a></li>
+          <li><a href="#">Mua vào</a></li>
+          <li><a href="#">Báo cáo</a></li>
+          <li><a href="#">Đại lý</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="sub-header">
+      <div class="left">
+        <span>Phát hành hóa đơn</span>
+        <span>Lập hóa đơn</span>
+      </div>
+      <div class="right">
+        <button class="btn-close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+
+    <main>
+      <section class="invoice-form">
+        <h2>Lập hóa đơn</h2>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ten-don-vi">Tên đơn vị</label>
+            <input type="text" id="ten-don-vi" placeholder="Nhập tên đơn vị">
+          </div>
+          <div class="form-group">
+            <label for="tai-khoan">Tài khoản</label>
+            <input type="text" id="tai-khoan" placeholder="Nhập tài khoản">
+          </div>
+          <div class="form-group">
+            <label for="ngay-hd">Ngày HĐ</label>
+            <div class="date-input">
+              <input type="text" id="ngay-hd" placeholder="DD/MM/YYYY">
+              <button id="calendar-btn"><i class="fa-solid fa-calendar"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ma-so-thue">Mã số thuế</label>
+            <div class="search-input">
+              <input type="text" id="ma-so-thue" placeholder="Nhập mã số thuế">
+              <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="nguoi-mua">Người mua</label>
+            <input type="text" id="nguoi-mua" placeholder="Nhập tên người mua">
+          </div>
+          <div class="form-group">
+            <label for="dien-thoai">Điện thoại</label>
+            <input type="text" id="dien-thoai" placeholder="Nhập số điện thoại">
+          </div>
+          <div class="form-group">
+            <label for="ngan-hang">Ngân hàng</label>
+            <input type="text" id="ngan-hang" placeholder="Nhập tên ngân hàng">
+          </div>
+          <div class="form-group">
+            <label for="loai-hd">Loại HĐ</label>
+            <select id="loai-hd">
+              <option value="hoa-don-ban-hang">Hóa đơn bán hàng</option>
+              <option value="hoa-don-dich-vu">Hóa đơn dịch vụ</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group large">
+            <label for="dia-chi">Địa chỉ</label>
+            <input type="text" id="dia-chi" placeholder="Nhập địa chỉ">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Nhập email">
+          </div>
+          <div class="form-group">
+            <label for="ky-hieu">Ký hiệu</label>
+            <input type="text" id="ky-hieu" placeholder="Nhập ký hiệu">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="hinh-thuc-tt">HTTT</label>
+            <select id="hinh-thuc-tt">
+              <option value="tm-ck">TM/CK</option>
+              <option value="tien-mat">Tiền mặt</option>
+              <option value="chuyen-khoan">Chuyển khoản</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="loai-tien">Loại tiền</label>
+            <select id="loai-tien">
+              <option value="vnd">VND</option>
+              <option value="usd">USD</option>
+              <option value="eur">EUR</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ty-gia">Tỷ giá</label>
+            <input type="text" id="ty-gia" placeholder="1">
+          </div>
+          <div class="form-group">
+            <label for="ma-khach">Mã khách</label>
+            <input type="text" id="ma-khach" placeholder="Nhập mã khách">
+          </div>
+          <div class="form-group">
+            <label for="so-hd">Số HĐ</label>
+            <input type="text" id="so-hd" placeholder="Nhập số hóa đơn">
+          </div>
+          <div class="form-group check-group">
+            <label></label>
+            <div class="checkbox-container">
+              <input type="checkbox" id="tu-dong-sinh">
+              <label for="tu-dong-sinh">Tự động sinh từ</label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="invoice-items">
+        <div class="table-toolbar">
+          <button id="add-row" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Thêm dòng</button>
+          <button id="delete-row" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa dòng</button>
+        </div>
+        
+        <div class="table-container">
+          <table id="invoice-table">
+            <thead>
+              <tr>
+                <th width="30px"></th>
+                <th width="30px"></th>
+                <th width="100px">Tính chất</th>
+                <th width="120px">Mã hàng</th>
+                <th width="250px">Tên hàng hóa, dịch vụ</th>
+                <th width="30px">ĐVT</th>
+                <th width="80px">Số lượng</th>
+                <th width="100px">Đơn giá</th>
+                <th width="120px">Thành tiền</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- This will be populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="invoice-summary">
+        <div class="summary-row">
+          <div class="summary-options">
+            <div class="radio-group">
+              <input type="radio" id="khong-chiet-khau" name="chiet-khau" checked>
+              <label for="khong-chiet-khau">Không chiết khấu/cộng</label>
+            </div>
+            <div class="radio-group">
+              <input type="radio" id="chiet-khau-phan-tram" name="chiet-khau">
+              <label for="chiet-khau-phan-tram">Chiết khấu %</label>
+            </div>
+            <div class="radio-group">
+              <input type="radio" id="chiet-khau-tien" name="chiet-khau">
+              <label for="chiet-khau-tien">Chiết khấu tiền hàng</label>
+            </div>
+          </div>
+          <div class="summary-totals">
+            <div class="total-row">
+              <label>Tổng cộng tiền hàng:</label>
+              <input type="text" id="tong-cktm" readonly>
+            </div>
+            <div class="total-row">
+              <label>Tổng chiết khấu:</label>
+              <input type="text" id="tong-chiet-khau" readonly>
+            </div>
+            <div class="total-row">
+              <label>Tổng tiền hàng:</label>
+              <input type="text" id="tong-tien-hang" readonly>
+            </div>
+            <div class="total-row">
+              <label>Tổng thuế VAT:</label>
+              <input type="text" id="tong-thue-vat" readonly>
+            </div>
+            <div class="total-row total-final">
+              <label>Tổng thanh toán:</label>
+              <input type="text" id="tong-thanh-toan" readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group large">
+            <label for="so-tien-chu">Số tiền viết bằng chữ</label>
+            <input type="text" id="so-tien-chu" readonly>
+          </div>
+        </div>
+
+        <div class="ghi-chu">
+          <label for="ghi-chu">Ghi chú</label>
+          <textarea id="ghi-chu" rows="2"></textarea>
+        </div>
+      </section>
+
+      <div class="action-buttons">
+        <button class="btn btn-secondary"><i class="fa-solid fa-print"></i> Lưu HĐ</button>
+        <button class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Phát hành</button>
+        <button class="btn btn-secondary"><i class="fa-solid fa-eye"></i> Hiển thị</button>
+        <button class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa HĐ</button>
+        <button class="btn btn-secondary"><i class="fa-solid fa-cloud-arrow-up"></i> HĐ chưa duyệt</button>
+        <button class="btn btn-secondary"><i class="fa-solid fa-check"></i> HĐ đã duyệt</button>
+        <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> Lập HĐ mới</button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="user-info">
+        <span>LƯU THỊ KIM THOA - MST: 0200259666</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>

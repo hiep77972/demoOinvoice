@@ -1,0 +1,165 @@
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .form-group {
+    min-width: 180px;
+  }
+  
+  .form-group.large {
+    min-width: 360px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-nav ul {
+    gap: var(--spacing-3);
+  }
+  
+  .main-nav a {
+    padding: var(--spacing-2);
+    font-size: 0.9rem;
+  }
+  
+  .invoice-form, 
+  .invoice-summary {
+    padding: var(--spacing-4);
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+  
+  .form-group,
+  .form-group.large {
+    min-width: 100%;
+  }
+  
+  .summary-row {
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  
+  .action-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: var(--spacing-3);
+    padding: var(--spacing-3);
+  }
+  
+  .main-nav {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .main-nav ul {
+    width: max-content;
+    padding-bottom: var(--spacing-2);
+  }
+  
+  main {
+    padding: var(--spacing-3);
+  }
+  
+  .table-container {
+    font-size: 0.8rem;
+  }
+  
+  .btn {
+    padding: var(--spacing-2);
+    font-size: 0.8rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  
+  .action-buttons .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .sub-header {
+    flex-direction: column;
+    gap: var(--spacing-2);
+    align-items: flex-start;
+  }
+  
+  .sub-header .right {
+    align-self: flex-end;
+  }
+  
+  .form-group label {
+    font-size: 0.8rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 0.85rem;
+  }
+  
+  .total-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-1);
+  }
+  
+  .total-row label {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .total-row input {
+    width: 100%;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: white;
+  }
+  
+  .container {
+    box-shadow: none;
+  }
+  
+  header, 
+  .sub-header, 
+  .table-toolbar, 
+  .btn, 
+  footer,
+  .action-buttons {
+    display: none;
+  }
+  
+  main {
+    padding: 0;
+  }
+  
+  .invoice-form, 
+  .invoice-summary, 
+  .table-container {
+    box-shadow: none;
+    border: none;
+    padding: var(--spacing-2);
+    margin: var(--spacing-2) 0;
+  }
+  
+  #invoice-table th {
+    background-color: #eee;
+    color: black;
+  }
+}

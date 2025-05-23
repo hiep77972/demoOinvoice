@@ -1,0 +1,222 @@
+/* Form Styles */
+.invoice-form {
+  background-color: var(--neutral-50);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--neutral-200);
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-group.large {
+  flex: 2;
+  min-width: 400px;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-1);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group select::placeholder,
+.form-group textarea::placeholder {
+  color: var(--neutral-400);
+}
+
+.search-input {
+  display: flex;
+}
+
+.search-input input {
+  flex: 1;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-input button {
+  background-color: var(--neutral-200);
+  border: 1px solid var(--neutral-300);
+  border-left: none;
+  padding: 0 var(--spacing-3);
+  border-top-right-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+  cursor: pointer;
+  color: var(--neutral-600);
+  transition: background-color 0.2s ease;
+}
+
+.search-input button:hover {
+  background-color: var(--neutral-300);
+}
+
+.date-input {
+  display: flex;
+}
+
+.date-input input {
+  flex: 1;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.date-input button {
+  background-color: var(--neutral-200);
+  border: 1px solid var(--neutral-300);
+  border-left: none;
+  padding: 0 var(--spacing-3);
+  border-top-right-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+  cursor: pointer;
+  color: var(--neutral-600);
+  transition: background-color 0.2s ease;
+}
+
+.date-input button:hover {
+  background-color: var(--neutral-300);
+}
+
+/* Checkbox and Radio Styles */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.check-group {
+  align-items: flex-end;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+}
+
+.radio-group input[type="radio"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.radio-group label {
+  font-size: 0.9rem;
+  color: var(--neutral-700);
+}
+
+/* Invoice Summary Section */
+.invoice-summary {
+  background-color: var(--neutral-50);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  margin-top: var(--spacing-6);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--neutral-200);
+}
+
+.summary-row {
+  display: flex;
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-4);
+}
+
+.summary-options {
+  flex: 2;
+}
+
+.summary-totals {
+  flex: 3;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.total-row label {
+  flex: 1;
+  font-weight: 500;
+  color: var(--neutral-700);
+  text-align: right;
+  padding-right: var(--spacing-3);
+}
+
+.total-row input {
+  flex: 1;
+  text-align: right;
+  font-weight: 500;
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-md);
+}
+
+.total-final label,
+.total-final input {
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+.ghi-chu {
+  margin-top: var(--spacing-4);
+}
+
+.ghi-chu label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-1);
+}
+
+.ghi-chu textarea {
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  resize: vertical;
+}
