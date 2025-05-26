@@ -6,6 +6,7 @@
   <title>Danh sách hóa đơn điện tử</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/form.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,18 +26,17 @@
     </header>
 
     <main>
-      <section class="search-section">
-        <div class="search-form">
-          <div class="search-row">
-            <div class="search-group">
+      <section class="invoice-form">
+        <div class="form-row">
+          <div class="form-group">
               <label for="mst">MST</label>
               <input type="text" id="mst" placeholder="Nhập mã số thuế">
             </div>
-            <div class="search-group large">
+            <div class="form-group large">
               <label for="don-vi-mua">Đơn vị mua</label>
               <input type="text" id="don-vi-mua" placeholder="Nhập đơn vị mua">
             </div>
-            <div class="search-group">
+            <div class="form-group">
               <label for="trang-thai">Trạng thái</label>
               <select id="trang-thai">
                 <option value="all">Tất cả</option>
@@ -45,29 +45,28 @@
               </select>
             </div>
           </div>
-          <div class="search-row">
-            <div class="search-group">
+          <div class="form-row">
+            <div class="form-group">
               <label>Từ ngày</label>
               <div class="date-input">
                 <input type="text" id="tu-ngay" placeholder="DD/MM/YYYY">
                 <button><i class="fa-solid fa-calendar"></i></button>
               </div>
             </div>
-            <div class="search-group">
+            <div class="form-group">
               <label>Đến ngày</label>
               <div class="date-input">
                 <input type="text" id="den-ngay" placeholder="DD/MM/YYYY">
                 <button><i class="fa-solid fa-calendar"></i></button>
               </div>
             </div>
-            <div class="search-group">
+            <div class="form-group">
               <label>&nbsp;</label>
               <button class="btn btn-primary" id="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm
               </button>
             </div>
           </div>
-        </div>
       </section>
 
       <section class="invoice-list">
@@ -122,19 +121,19 @@
       </section>
 
       <div class="action-buttons">
-        <button class="btn btn-secondary"><i class="fa-solid fa-eye"></i> Hiển thị CT</button>
+        <!-- <button class="btn btn-secondary"><i class="fa-solid fa-eye"></i> Hiển thị CT</button>
         <button class="btn btn-secondary"><i class="fa-solid fa-file"></i> Hiển thị HĐ</button>
         <button class="btn btn-secondary"><i class="fa-solid fa-envelope"></i> Gửi Email</button>
-        <button class="btn btn-secondary"><i class="fa-solid fa-download"></i> Tra cứu</button>
+        <button class="btn btn-secondary"><i class="fa-solid fa-download"></i> Tra cứu</button> -->
         <button class="btn btn-secondary"><i class="fa-solid fa-trash"></i> Hủy HĐ</button>
-        <button class="btn btn-secondary"><i class="fa-solid fa-pen"></i> Thay thế</button>
+        <!-- <button class="btn btn-secondary"><i class="fa-solid fa-pen"></i> Thay thế</button> -->
         <button class="btn btn-secondary"><i class="fa-solid fa-edit"></i> Điều chỉnh</button>
         <button class="btn btn-secondary"><i class="fa-solid fa-file-pdf"></i> Xuất PDF</button>
         <button class="btn btn-secondary"><i class="fa-solid fa-print"></i> In thể hiện</button>
-        <button class="btn btn-secondary"><i class="fa-solid fa-truck"></i> In chuyển đổi</button>
+        <!-- <button class="btn btn-secondary"><i class="fa-solid fa-truck"></i> In chuyển đổi</button>
         <button class="btn btn-secondary"><i class="fa-solid fa-file-excel"></i> Xuất Excel</button>
         <button class="btn btn-secondary"><i class="fa-solid fa-file-excel"></i> Excel MISA</button>
-        <button class="btn btn-secondary"><i class="fa-solid fa-copy"></i> Sao chép</button>
+        <button class="btn btn-secondary"><i class="fa-solid fa-copy"></i> Sao chép</button> -->
       </div>
     </main>
 
