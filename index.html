@@ -32,8 +32,18 @@
       <section class="invoice-form">
         <h2>Lập hóa đơn</h2>
 
-<div class="form-row">
-          
+
+          <!-- <div class="form-group">
+            <label for="dien-thoai">Điện thoại</label>
+            <input type="text" id="dien-thoai" placeholder="Nhập số điện thoại">
+          </div>
+          <div class="form-group">
+            <label for="ngan-hang">Ngân hàng</label>
+            <input type="text" id="ngan-hang" placeholder="Nhập tên ngân hàng">
+          </div> -->
+
+        <!-- <div class="form-row">
+
           <div class="form-group">
             <label for="ngay-hd">Ngày HĐ</label>
             <div class="date-input">
@@ -56,40 +66,19 @@
             <label for="so-hd">Số HĐ</label>
             <input type="text" id="so-hd" placeholder="Nhập số hóa đơn">
           </div>
-          <!-- <div class="form-group">
-            <label for="dien-thoai">Điện thoại</label>
-            <input type="text" id="dien-thoai" placeholder="Nhập số điện thoại">
-          </div>
-          <div class="form-group">
-            <label for="ngan-hang">Ngân hàng</label>
-            <input type="text" id="ngan-hang" placeholder="Nhập tên ngân hàng">
-          </div> -->
-          
-        </div>
+
+
+        </div> -->
 
         <div class="form-row">
-          <div class="form-group">
-            <label for="ten-don-vi">Tên đơn vị</label>
-            <input type="text" id="ten-don-vi" placeholder="Nhập tên đơn vị">
-          </div>
-          <!-- <div class="form-group">
-            <label for="tai-khoan">Mã khách hàng</label>
-            <input type="text" id="tai-khoan" placeholder="Nhập mã khách hàng">
-          </div> -->
-          <div class="form-group">
-            <label for="ma-khach">Mã khách</label>
-            <input type="text" id="ma-khach" placeholder="Nhập mã khách">
-          </div>
           <div class="form-group">
             <label for="nguoi-mua">Người mua</label>
             <input type="text" id="nguoi-mua" placeholder="Nhập tên người mua">
           </div>
-          
-        </div>
-
-        
-
-        <div class="form-row">
+          <div class="form-group">
+            <label for="ten-don-vi">Tên đơn vị</label>
+            <input type="text" id="ten-don-vi" placeholder="Nhập tên đơn vị">
+          </div>
           <div class="form-group">
             <label for="ma-so-thue">Mã số thuế</label>
             <div class="search-input">
@@ -97,54 +86,25 @@
               <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
           </div>
+          <!-- <div class="form-group">
+            <label for="tai-khoan">Mã khách hàng</label>
+            <input type="text" id="tai-khoan" placeholder="Nhập mã khách hàng">
+          </div> -->
+          
+
+        </div>
+
+
+
+        <div class="form-row">
+          
           <div class="form-group large">
             <label for="dia-chi">Địa chỉ</label>
             <input type="text" id="dia-chi" placeholder="Nhập địa chỉ">
           </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Nhập email">
-          </div>
-          <!-- <div class="form-group">
-            <label for="ky-hieu">Ký hiệu</label>
-            <input type="text" id="ky-hieu" placeholder="Nhập ký hiệu">
-          </div> -->
+
         </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label for="hinh-thuc-tt">HTTT</label>
-            <select id="hinh-thuc-tt">
-              <option value="tm-ck">TM/CK</option>
-              <option value="tien-mat">Tiền mặt</option>
-              <option value="chuyen-khoan">Chuyển khoản</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="loai-tien">Loại tiền</label>
-            <select id="loai-tien">
-              <option value="vnd">VND</option>
-              <option value="usd">USD</option>
-              <option value="eur">EUR</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="ty-gia">Tỷ giá</label>
-            <input type="text" id="ty-gia" placeholder="1">
-          </div>
-          
-          <!-- <div class="form-group">
-            <label for="so-hd">Số HĐ</label>
-            <input type="text" id="so-hd" placeholder="Nhập số hóa đơn">
-          </div> -->
-          <!-- <div class="form-group check-group">
-            <label></label>
-            <div class="checkbox-container">
-              <input type="checkbox" id="tu-dong-sinh">
-              <label for="tu-dong-sinh">Tự động sinh từ</label>
-            </div>
-          </div> -->
-        </div>
       </section>
 
       <section class="invoice-items">
@@ -159,8 +119,6 @@
               <tr>
                 <th width="30px"></th>
                 <th width="30px"></th>
-                <th width="100px">Tính chất</th>
-                <th width="120px">Mã hàng</th>
                 <th width="250px">Tên hàng hóa, dịch vụ</th>
                 <th width="30px">ĐVT</th>
                 <th width="80px">Số lượng</th>
@@ -177,25 +135,6 @@
                   <i class="fa-solid fa-magnifying-glass search-icon"></i>
                 </td>
                 <td>
-                  <select class="item-type">
-                    <option value="">--Chọn--</option>
-                    <option value="hh-dv" ${rowData.type==='hh-dv' ? 'selected' : '' }>HH-DV</option>
-                    <option value="lo" ${rowData.type==='lo' ? 'selected' : '' }>Lô</option>
-                    <option value="hop" ${rowData.type==='hop' ? 'selected' : '' }>Hộp</option>
-                    <option value="chai" ${rowData.type==='chai' ? 'selected' : '' }>Chai</option>
-                    <option value="tui" ${rowData.type==='tui' ? 'selected' : '' }>Túi</option>
-                  </select>
-                </td>
-                <td>
-                  <div class="search-input dropdown-cell">
-                    <input type="text" class="item-code" value="" placeholder="Mã hàng">
-                    <i class="fa-solid fa-caret-down search-icon dropdown-toggle"></i>
-                    <div class="dropdown-content">
-                      <!-- Dropdown items will be added by JavaScript -->
-                    </div>
-                  </div>
-                </td>
-                <td>
                   <input type="text" class="item-name" value="" placeholder="Tên hàng hóa, dịch vụ">
                 </td>
                 <td>
@@ -225,25 +164,6 @@
                   <i class="fa-solid fa-magnifying-glass search-icon"></i>
                 </td>
                 <td>
-                  <select class="item-type">
-                    <option value="">--Chọn--</option>
-                    <option value="hh-dv" ${rowData.type==='hh-dv' ? 'selected' : '' }>HH-DV</option>
-                    <option value="lo" ${rowData.type==='lo' ? 'selected' : '' }>Lô</option>
-                    <option value="hop" ${rowData.type==='hop' ? 'selected' : '' }>Hộp</option>
-                    <option value="chai" ${rowData.type==='chai' ? 'selected' : '' }>Chai</option>
-                    <option value="tui" ${rowData.type==='tui' ? 'selected' : '' }>Túi</option>
-                  </select>
-                </td>
-                <td>
-                  <div class="search-input dropdown-cell">
-                    <input type="text" class="item-code" value="" placeholder="Mã hàng">
-                    <i class="fa-solid fa-caret-down search-icon dropdown-toggle"></i>
-                    <div class="dropdown-content">
-                      <!-- Dropdown items will be added by JavaScript -->
-                    </div>
-                  </div>
-                </td>
-                <td>
                   <input type="text" class="item-name" value="" placeholder="Tên hàng hóa, dịch vụ">
                 </td>
                 <td>
@@ -271,25 +191,6 @@
                 </td>
                 <td class="action-cell">
                   <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                </td>
-                <td>
-                  <select class="item-type">
-                    <option value="">--Chọn--</option>
-                    <option value="hh-dv" ${rowData.type==='hh-dv' ? 'selected' : '' }>HH-DV</option>
-                    <option value="lo" ${rowData.type==='lo' ? 'selected' : '' }>Lô</option>
-                    <option value="hop" ${rowData.type==='hop' ? 'selected' : '' }>Hộp</option>
-                    <option value="chai" ${rowData.type==='chai' ? 'selected' : '' }>Chai</option>
-                    <option value="tui" ${rowData.type==='tui' ? 'selected' : '' }>Túi</option>
-                  </select>
-                </td>
-                <td>
-                  <div class="search-input dropdown-cell">
-                    <input type="text" class="item-code" value="" placeholder="Mã hàng">
-                    <i class="fa-solid fa-caret-down search-icon dropdown-toggle"></i>
-                    <div class="dropdown-content">
-                      <!-- Dropdown items will be added by JavaScript -->
-                    </div>
-                  </div>
                 </td>
                 <td>
                   <input type="text" class="item-name" value="" placeholder="Tên hàng hóa, dịch vụ">
