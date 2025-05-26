@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập - Hóa đơn điện tử</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <h1>Hóa đơn điện tử</h1>
+      </div>
+    </header>
+
+    <main class="login-page">
+      <section class="invoice-form login-form">
+        <h2>Đăng nhập</h2>
+        
+        <form id="loginForm" onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ma-so-thue">Mã số thuế</label>
+              <div class="search-input">
+                <input type="text" id="ma-so-thue" placeholder="Nhập mã số thuế" required>
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="tai-khoan">Tài khoản</label>
+              <input type="text" id="tai-khoan" placeholder="Nhập tài khoản" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="mat-khau">Mật khẩu</label>
+              <div class="password-input">
+                <input type="password" id="mat-khau" placeholder="Nhập mật khẩu" required>
+                <button type="button" id="toggle-password" class="toggle-password">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group check-group">
+              <div class="checkbox-container">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Ghi nhớ đăng nhập</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button type="submit" class="btn btn-primary" id="login-btn">
+              <i class="fa-solid fa-right-to-bracket"></i> Đăng nhập
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="user-info">
+        <span>© 2025 Hóa đơn điện tử. All rights reserved.</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const togglePassword = document.getElementById('toggle-password');
+      const passwordInput = document.getElementById('mat-khau');
+      const loginForm = document.getElementById('loginForm');
+      const loginBtn = document.getElementById('login-btn');
+
+      // Toggle password visibility
+      togglePassword.addEventListener('click', () => {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        togglePassword.querySelector('i').className = 
+          type === 'password' ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash';
+      });
+
+      // Handle form submission
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const maSoThue = document.getElementById('ma-so-thue').value;
+        const taiKhoan = document.getElementById('tai-khoan').value;
+        const matKhau = passwordInput.value;
+        const rememberMe = document.getElementById('remember-me').checked;
+
+        // Add your login logic here
+        console.log('Login attempt:', { maSoThue, taiKhoan, matKhau, rememberMe });
+        
+        // Simulate login - replace with actual login logic
+        loginBtn.disabled = true;
+        loginBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang đăng nhập...';
+        
+        setTimeout(() => {
+          window.location.href = 'home.html';
+        }, 1500);
+      });
+    });
+  </script>
+
+  <style>
+    .login-page {
+      min-height: calc(100vh - 140px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--spacing-6);
+    }
+
+    .login-form {
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+      animation: slideDown 0.3s ease-out;
+    }
+
+    .password-input {
+      position: relative;
+      display: flex;
+    }
+
+    .password-input input {
+      flex: 1;
+      padding-right: 40px;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      padding: 0 var(--spacing-3);
+      background: none;
+      border: none;
+      color: var(--neutral-600);
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .toggle-password:hover {
+      color: var(--neutral-800);
+    }
+
+    .checkbox-container {
+      margin-top: var(--spacing-2);
+    }
+
+    .login-form .action-buttons {
+      margin-top: var(--spacing-6);
+      padding-top: var(--spacing-4);
+    }
+
+    .login-form .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    @media (max-width: 480px) {
+      .login-page {
+        padding: var(--spacing-4);
+      }
+      
+      .login-form {
+        padding: var(--spacing-4);
+      }
+    }
+  </style>
+</body>
+</html>
