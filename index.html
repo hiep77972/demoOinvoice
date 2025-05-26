@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -19,40 +21,19 @@
       </div>
       <nav class="main-nav">
         <ul>
-          <li><a href="#" class="active">Hệ thống</a></li>
-          <li><a href="#">Danh mục</a></li>
-          <li><a href="#">Hóa đơn điện tử</a></li>
-          <li><a href="#">Mua vào</a></li>
-          <li><a href="#">Báo cáo</a></li>
-          <li><a href="#">Đại lý</a></li>
-          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Danh sách hóa đơn</a></li>
+          <li><a href="#" class="active">Lập hóa đơn</a></li>
         </ul>
       </nav>
     </header>
 
-    <div class="sub-header">
-      <div class="left">
-        <span>Phát hành hóa đơn</span>
-        <span>Lập hóa đơn</span>
-      </div>
-      <div class="right">
-        <button class="btn-close"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-    </div>
 
     <main>
       <section class="invoice-form">
         <h2>Lập hóa đơn</h2>
-        
-        <div class="form-row">
-          <div class="form-group">
-            <label for="ten-don-vi">Tên đơn vị</label>
-            <input type="text" id="ten-don-vi" placeholder="Nhập tên đơn vị">
-          </div>
-          <div class="form-group">
-            <label for="tai-khoan">Tài khoản</label>
-            <input type="text" id="tai-khoan" placeholder="Nhập tài khoản">
-          </div>
+
+<div class="form-row">
+          
           <div class="form-group">
             <label for="ngay-hd">Ngày HĐ</label>
             <div class="date-input">
@@ -60,7 +41,53 @@
               <button id="calendar-btn"><i class="fa-solid fa-calendar"></i></button>
             </div>
           </div>
+          <div class="form-group">
+            <label for="loai-hd">Loại HĐ</label>
+            <select id="loai-hd">
+              <option value="hoa-don-ban-hang">Hóa đơn bán hàng</option>
+              <option value="hoa-don-dich-vu">Hóa đơn dịch vụ</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ky-hieu">Ký hiệu</label>
+            <input type="text" id="ky-hieu" placeholder="Nhập ký hiệu">
+          </div>
+          <div class="form-group">
+            <label for="so-hd">Số HĐ</label>
+            <input type="text" id="so-hd" placeholder="Nhập số hóa đơn">
+          </div>
+          <!-- <div class="form-group">
+            <label for="dien-thoai">Điện thoại</label>
+            <input type="text" id="dien-thoai" placeholder="Nhập số điện thoại">
+          </div>
+          <div class="form-group">
+            <label for="ngan-hang">Ngân hàng</label>
+            <input type="text" id="ngan-hang" placeholder="Nhập tên ngân hàng">
+          </div> -->
+          
         </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ten-don-vi">Tên đơn vị</label>
+            <input type="text" id="ten-don-vi" placeholder="Nhập tên đơn vị">
+          </div>
+          <!-- <div class="form-group">
+            <label for="tai-khoan">Mã khách hàng</label>
+            <input type="text" id="tai-khoan" placeholder="Nhập mã khách hàng">
+          </div> -->
+          <div class="form-group">
+            <label for="ma-khach">Mã khách</label>
+            <input type="text" id="ma-khach" placeholder="Nhập mã khách">
+          </div>
+          <div class="form-group">
+            <label for="nguoi-mua">Người mua</label>
+            <input type="text" id="nguoi-mua" placeholder="Nhập tên người mua">
+          </div>
+          
+        </div>
+
+        
 
         <div class="form-row">
           <div class="form-group">
@@ -70,28 +97,6 @@
               <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
           </div>
-          <div class="form-group">
-            <label for="nguoi-mua">Người mua</label>
-            <input type="text" id="nguoi-mua" placeholder="Nhập tên người mua">
-          </div>
-          <div class="form-group">
-            <label for="dien-thoai">Điện thoại</label>
-            <input type="text" id="dien-thoai" placeholder="Nhập số điện thoại">
-          </div>
-          <div class="form-group">
-            <label for="ngan-hang">Ngân hàng</label>
-            <input type="text" id="ngan-hang" placeholder="Nhập tên ngân hàng">
-          </div>
-          <div class="form-group">
-            <label for="loai-hd">Loại HĐ</label>
-            <select id="loai-hd">
-              <option value="hoa-don-ban-hang">Hóa đơn bán hàng</option>
-              <option value="hoa-don-dich-vu">Hóa đơn dịch vụ</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-row">
           <div class="form-group large">
             <label for="dia-chi">Địa chỉ</label>
             <input type="text" id="dia-chi" placeholder="Nhập địa chỉ">
@@ -100,10 +105,10 @@
             <label for="email">Email</label>
             <input type="email" id="email" placeholder="Nhập email">
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="ky-hieu">Ký hiệu</label>
             <input type="text" id="ky-hieu" placeholder="Nhập ký hiệu">
-          </div>
+          </div> -->
         </div>
 
         <div class="form-row">
@@ -127,21 +132,18 @@
             <label for="ty-gia">Tỷ giá</label>
             <input type="text" id="ty-gia" placeholder="1">
           </div>
-          <div class="form-group">
-            <label for="ma-khach">Mã khách</label>
-            <input type="text" id="ma-khach" placeholder="Nhập mã khách">
-          </div>
-          <div class="form-group">
+          
+          <!-- <div class="form-group">
             <label for="so-hd">Số HĐ</label>
             <input type="text" id="so-hd" placeholder="Nhập số hóa đơn">
-          </div>
-          <div class="form-group check-group">
+          </div> -->
+          <!-- <div class="form-group check-group">
             <label></label>
             <div class="checkbox-container">
               <input type="checkbox" id="tu-dong-sinh">
               <label for="tu-dong-sinh">Tự động sinh từ</label>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
 
@@ -150,7 +152,7 @@
           <button id="add-row" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Thêm dòng</button>
           <button id="delete-row" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa dòng</button>
         </div>
-        
+
         <div class="table-container">
           <table id="invoice-table">
             <thead>
@@ -167,14 +169,158 @@
               </tr>
             </thead>
             <tbody>
-              <!-- This will be populated by JavaScript -->
+              <tr>
+                <td class="checkbox-cell">
+                  <input type="checkbox" class="row-selector" ${rowData.selected ? 'checked' : '' }>
+                </td>
+                <td class="action-cell">
+                  <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                </td>
+                <td>
+                  <select class="item-type">
+                    <option value="">--Chọn--</option>
+                    <option value="hh-dv" ${rowData.type==='hh-dv' ? 'selected' : '' }>HH-DV</option>
+                    <option value="lo" ${rowData.type==='lo' ? 'selected' : '' }>Lô</option>
+                    <option value="hop" ${rowData.type==='hop' ? 'selected' : '' }>Hộp</option>
+                    <option value="chai" ${rowData.type==='chai' ? 'selected' : '' }>Chai</option>
+                    <option value="tui" ${rowData.type==='tui' ? 'selected' : '' }>Túi</option>
+                  </select>
+                </td>
+                <td>
+                  <div class="search-input dropdown-cell">
+                    <input type="text" class="item-code" value="" placeholder="Mã hàng">
+                    <i class="fa-solid fa-caret-down search-icon dropdown-toggle"></i>
+                    <div class="dropdown-content">
+                      <!-- Dropdown items will be added by JavaScript -->
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <input type="text" class="item-name" value="" placeholder="Tên hàng hóa, dịch vụ">
+                </td>
+                <td>
+                  <select class="item-unit">
+                    <option value="">--</option>
+                    <option value="lo">Lô</option>
+                    <option value="hop">Hộp</option>
+                    <option value="chai">Chai</option>
+                    <option value="tui">Túi</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="number" class="item-quantity numeric-cell" value="0" placeholder="0" min="0">
+                </td>
+                <td>
+                  <input type="number" class="item-price numeric-cell" value="0" placeholder="0" min="0">
+                </td>
+                <td>
+                  <input type="text" class="item-total numeric-cell" value="0" readonly>
+                </td>
+              </tr>
+              <tr>
+                <td class="checkbox-cell">
+                  <input type="checkbox" class="row-selector" ${rowData.selected ? 'checked' : '' }>
+                </td>
+                <td class="action-cell">
+                  <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                </td>
+                <td>
+                  <select class="item-type">
+                    <option value="">--Chọn--</option>
+                    <option value="hh-dv" ${rowData.type==='hh-dv' ? 'selected' : '' }>HH-DV</option>
+                    <option value="lo" ${rowData.type==='lo' ? 'selected' : '' }>Lô</option>
+                    <option value="hop" ${rowData.type==='hop' ? 'selected' : '' }>Hộp</option>
+                    <option value="chai" ${rowData.type==='chai' ? 'selected' : '' }>Chai</option>
+                    <option value="tui" ${rowData.type==='tui' ? 'selected' : '' }>Túi</option>
+                  </select>
+                </td>
+                <td>
+                  <div class="search-input dropdown-cell">
+                    <input type="text" class="item-code" value="" placeholder="Mã hàng">
+                    <i class="fa-solid fa-caret-down search-icon dropdown-toggle"></i>
+                    <div class="dropdown-content">
+                      <!-- Dropdown items will be added by JavaScript -->
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <input type="text" class="item-name" value="" placeholder="Tên hàng hóa, dịch vụ">
+                </td>
+                <td>
+                  <select class="item-unit">
+                    <option value="">--</option>
+                    <option value="lo">Lô</option>
+                    <option value="hop">Hộp</option>
+                    <option value="chai">Chai</option>
+                    <option value="tui">Túi</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="number" class="item-quantity numeric-cell" value="0" placeholder="0" min="0">
+                </td>
+                <td>
+                  <input type="number" class="item-price numeric-cell" value="0" placeholder="0" min="0">
+                </td>
+                <td>
+                  <input type="text" class="item-total numeric-cell" value="0" readonly>
+                </td>
+              </tr>
+              <tr>
+                <td class="checkbox-cell">
+                  <input type="checkbox" class="row-selector" ${rowData.selected ? 'checked' : '' }>
+                </td>
+                <td class="action-cell">
+                  <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                </td>
+                <td>
+                  <select class="item-type">
+                    <option value="">--Chọn--</option>
+                    <option value="hh-dv" ${rowData.type==='hh-dv' ? 'selected' : '' }>HH-DV</option>
+                    <option value="lo" ${rowData.type==='lo' ? 'selected' : '' }>Lô</option>
+                    <option value="hop" ${rowData.type==='hop' ? 'selected' : '' }>Hộp</option>
+                    <option value="chai" ${rowData.type==='chai' ? 'selected' : '' }>Chai</option>
+                    <option value="tui" ${rowData.type==='tui' ? 'selected' : '' }>Túi</option>
+                  </select>
+                </td>
+                <td>
+                  <div class="search-input dropdown-cell">
+                    <input type="text" class="item-code" value="" placeholder="Mã hàng">
+                    <i class="fa-solid fa-caret-down search-icon dropdown-toggle"></i>
+                    <div class="dropdown-content">
+                      <!-- Dropdown items will be added by JavaScript -->
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <input type="text" class="item-name" value="" placeholder="Tên hàng hóa, dịch vụ">
+                </td>
+                <td>
+                  <select class="item-unit">
+                    <option value="">--</option>
+                    <option value="lo">Lô</option>
+                    <option value="hop">Hộp</option>
+                    <option value="chai">Chai</option>
+                    <option value="tui">Túi</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="number" class="item-quantity numeric-cell" value="0" placeholder="0" min="0">
+                </td>
+                <td>
+                  <input type="number" class="item-price numeric-cell" value="0" placeholder="0" min="0">
+                </td>
+                <td>
+                  <input type="text" class="item-total numeric-cell" value="0" readonly>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
       </section>
 
       <section class="invoice-summary">
-        <div class="summary-row">
+
+        <!-- <div class="summary-row">
           <div class="summary-options">
             <div class="radio-group">
               <input type="radio" id="khong-chiet-khau" name="chiet-khau" checked>
@@ -211,8 +357,13 @@
               <input type="text" id="tong-thanh-toan" readonly>
             </div>
           </div>
+        </div> -->
+        <div class="form-row">
+          <div class="form-group large">
+            <label for="so-tien-chu">Tổng thanh toán:</label>
+            <input type="text" id="so-tien-chu" readonly>
+          </div>
         </div>
-
         <div class="form-row">
           <div class="form-group large">
             <label for="so-tien-chu">Số tiền viết bằng chữ</label>
@@ -220,10 +371,6 @@
           </div>
         </div>
 
-        <div class="ghi-chu">
-          <label for="ghi-chu">Ghi chú</label>
-          <textarea id="ghi-chu" rows="2"></textarea>
-        </div>
       </section>
 
       <div class="action-buttons">
@@ -231,9 +378,6 @@
         <button class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Phát hành</button>
         <button class="btn btn-secondary"><i class="fa-solid fa-eye"></i> Hiển thị</button>
         <button class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa HĐ</button>
-        <button class="btn btn-secondary"><i class="fa-solid fa-cloud-arrow-up"></i> HĐ chưa duyệt</button>
-        <button class="btn btn-secondary"><i class="fa-solid fa-check"></i> HĐ đã duyệt</button>
-        <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> Lập HĐ mới</button>
       </div>
     </main>
 
@@ -246,4 +390,5 @@
 
   <script src="js/main.js" type="module"></script>
 </body>
+
 </html>
